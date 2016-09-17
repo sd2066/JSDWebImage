@@ -20,7 +20,7 @@
 
 @end
 @implementation JSDDownloadOperation
-+ (instancetype)downloadOperationWithURLStr:(NSString *)urlStr block:(void(^)(UIImage *))block
++ (instancetype)downloadOperationWithURLStr:(NSString *)urlStr block:(void(^)(UIImage *image))block
 {
     JSDDownloadOperation *op = [[JSDDownloadOperation alloc] init];
     op.urlStr = urlStr;
