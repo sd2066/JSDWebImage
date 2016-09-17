@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JSDDownloadOperation.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//    创建队列
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    创建操作
+    JSDDownloadOperation *op = [[JSDDownloadOperation alloc] init];
+//    把操作添加到队列
+    [queue addOperation:op];
 }
 
 - (void)didReceiveMemoryWarning {

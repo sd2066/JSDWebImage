@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077C40D51D8D65A800DA85FE /* JSDDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */; };
 		07E4D9231D8D522B00BE854C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E4D9221D8D522B00BE854C /* main.m */; };
 		07E4D9261D8D522B00BE854C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E4D9251D8D522B00BE854C /* AppDelegate.m */; };
 		07E4D9291D8D522B00BE854C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E4D9281D8D522B00BE854C /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDownloadOperation.h; sourceTree = "<group>"; };
+		077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDDownloadOperation.m; sourceTree = "<group>"; };
 		07E4D91E1D8D522B00BE854C /* JSDWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E4D9221D8D522B00BE854C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07E4D9241D8D522B00BE854C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 			children = (
 				07E4D9241D8D522B00BE854C /* AppDelegate.h */,
 				07E4D9251D8D522B00BE854C /* AppDelegate.m */,
+				077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */,
+				077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */,
 				07E4D9271D8D522B00BE854C /* ViewController.h */,
 				07E4D9281D8D522B00BE854C /* ViewController.m */,
 				07E4D92A1D8D522B00BE854C /* Main.storyboard */,
@@ -152,6 +157,7 @@
 				07E4D9291D8D522B00BE854C /* ViewController.m in Sources */,
 				07E4D9261D8D522B00BE854C /* AppDelegate.m in Sources */,
 				07E4D9231D8D522B00BE854C /* main.m in Sources */,
+				077C40D51D8D65A800DA85FE /* JSDDownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +304,7 @@
 				07E4D9371D8D522B00BE854C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
