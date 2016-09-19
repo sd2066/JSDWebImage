@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0721879F1D9001EF00A9B585 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721879B1D9001EF00A9B585 /* NSObject+YYModel.m */; };
+		072187A01D9001EF00A9B585 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721879D1D9001EF00A9B585 /* YYClassInfo.m */; };
+		072187A31D9002DC00A9B585 /* JSDDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 072187A21D9002DC00A9B585 /* JSDDownloadManager.m */; };
+		072187A61D900EE700A9B585 /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 072187A51D900EE700A9B585 /* NSString+path.m */; };
 		077C40D51D8D65A800DA85FE /* JSDDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */; };
 		077C40E41D8D6C2300DA85FE /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40D81D8D6C2300DA85FE /* AFHTTPSessionManager.m */; };
 		077C40E51D8D6C2300DA85FE /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40DB1D8D6C2300DA85FE /* AFNetworkReachabilityManager.m */; };
@@ -24,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0721879A1D9001EF00A9B585 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		0721879B1D9001EF00A9B585 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		0721879C1D9001EF00A9B585 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		0721879D1D9001EF00A9B585 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		0721879E1D9001EF00A9B585 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		072187A11D9002DC00A9B585 /* JSDDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDownloadManager.h; sourceTree = "<group>"; };
+		072187A21D9002DC00A9B585 /* JSDDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDDownloadManager.m; sourceTree = "<group>"; };
+		072187A41D900EE700A9B585 /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
+		072187A51D900EE700A9B585 /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
 		077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDownloadOperation.h; sourceTree = "<group>"; };
 		077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDDownloadOperation.m; sourceTree = "<group>"; };
 		077C40D71D8D6C2300DA85FE /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -64,6 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072187981D9000AA00A9B585 /* JSDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */,
+				077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */,
+				072187A11D9002DC00A9B585 /* JSDDownloadManager.h */,
+				072187A21D9002DC00A9B585 /* JSDDownloadManager.m */,
+				072187A41D900EE700A9B585 /* NSString+path.h */,
+				072187A51D900EE700A9B585 /* NSString+path.m */,
+			);
+			name = JSDWebImage;
+			sourceTree = "<group>";
+		};
+		072187991D9001EE00A9B585 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				0721879A1D9001EF00A9B585 /* NSObject+YYModel.h */,
+				0721879B1D9001EF00A9B585 /* NSObject+YYModel.m */,
+				0721879C1D9001EF00A9B585 /* YYClassInfo.h */,
+				0721879D1D9001EF00A9B585 /* YYClassInfo.m */,
+				0721879E1D9001EF00A9B585 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
 		077C40D61D8D6C2300DA85FE /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +141,15 @@
 		07E4D9201D8D522B00BE854C /* JSDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				072187991D9001EE00A9B585 /* YYModel */,
 				077C40D61D8D6C2300DA85FE /* AFNetworking */,
-				07E4D9241D8D522B00BE854C /* AppDelegate.h */,
-				07E4D9251D8D522B00BE854C /* AppDelegate.m */,
-				077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */,
-				077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */,
-				077C40EA1D8D6C5500DA85FE /* JSDAppModel.h */,
-				077C40EB1D8D6C5500DA85FE /* JSDAppModel.m */,
+				072187981D9000AA00A9B585 /* JSDWebImage */,
 				07E4D9271D8D522B00BE854C /* ViewController.h */,
 				07E4D9281D8D522B00BE854C /* ViewController.m */,
+				077C40EA1D8D6C5500DA85FE /* JSDAppModel.h */,
+				077C40EB1D8D6C5500DA85FE /* JSDAppModel.m */,
+				07E4D9241D8D522B00BE854C /* AppDelegate.h */,
+				07E4D9251D8D522B00BE854C /* AppDelegate.m */,
 				07E4D92A1D8D522B00BE854C /* Main.storyboard */,
 				07E4D92D1D8D522B00BE854C /* Assets.xcassets */,
 				07E4D92F1D8D522B00BE854C /* LaunchScreen.storyboard */,
@@ -155,6 +193,7 @@
 		07E4D9161D8D522B00BE854C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JSD;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Abner;
 				TargetAttributes = {
@@ -202,11 +241,15 @@
 				077C40E61D8D6C2300DA85FE /* AFSecurityPolicy.m in Sources */,
 				077C40E81D8D6C2300DA85FE /* AFURLResponseSerialization.m in Sources */,
 				07E4D9291D8D522B00BE854C /* ViewController.m in Sources */,
+				0721879F1D9001EF00A9B585 /* NSObject+YYModel.m in Sources */,
 				07E4D9261D8D522B00BE854C /* AppDelegate.m in Sources */,
+				072187A31D9002DC00A9B585 /* JSDDownloadManager.m in Sources */,
 				077C40E41D8D6C2300DA85FE /* AFHTTPSessionManager.m in Sources */,
 				077C40EC1D8D6C5500DA85FE /* JSDAppModel.m in Sources */,
 				077C40E91D8D6C2300DA85FE /* AFURLSessionManager.m in Sources */,
 				07E4D9231D8D522B00BE854C /* main.m in Sources */,
+				072187A61D900EE700A9B585 /* NSString+path.m in Sources */,
+				072187A01D9001EF00A9B585 /* YYClassInfo.m in Sources */,
 				077C40E51D8D6C2300DA85FE /* AFNetworkReachabilityManager.m in Sources */,
 				077C40D51D8D65A800DA85FE /* JSDDownloadOperation.m in Sources */,
 				077C40E71D8D6C2300DA85FE /* AFURLRequestSerialization.m in Sources */,

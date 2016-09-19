@@ -10,6 +10,8 @@
 #import "JSDDownloadOperation.h"
 #import "AFHTTPSessionManager.h"
 #import "JSDAppModel.h"
+#import "YYModel.h"
+#import "JSDDownloadManager.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconimageView;
@@ -36,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    实例化数组
+    _modelArr = [NSArray array];
 //    创建队列
     _queue = [[NSOperationQueue alloc] init];
 //   实例化操作缓存池
@@ -45,24 +49,18 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     int random = arc4random_uniform((unsigned int)_modelArr.count);
     JSDAppModel *app = _modelArr[random];
+//    判断连续两次传入的地址是否一样，如果不一样，就取消上一次的操作
     if (![app.icon isEqualToString:_lastUrlStr] && _lastUrlStr != nil) {
-//        取消上一次的操作
-        [[self.opsCache objectForKey:_lastUrlStr] cancel];
-//        移除上一次添加的操作
-        [self.opsCache removeObjectForKey:_lastUrlStr];
+//        单例接管取消操作
+        [[JSDDownloadManager sharedDownloadManager] downloadManagerCancelDowmloadOperationWithLastUrl:self.lastUrlStr];
     }
     //        把本次图像地址记录一下
     self.lastUrlStr = app.icon;
-    //    创建操作
-        JSDDownloadOperation *op = [JSDDownloadOperation downloadOperationWithURLStr:app.icon block:^(UIImage *image) {
-            self.iconimageView.image = image;
-            NSLog(@"正在更新UI%@",[NSThread currentThread]);
-        }];
-    //    把操作添加到队列
-        [_queue addOperation:op];
-//    把操作添加到操作缓存池
-    [self.opsCache setObject:op forKey:app.icon];
 
+//    单例接管下载操作
+    [[JSDDownloadManager sharedDownloadManager] downloadImageWithUrlStr:app.icon successBlock:^(UIImage *image) {
+        self.iconimageView.image = image;
+    }];
 }
 /**
  *  AFN加载Jason数据
@@ -74,13 +72,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:@"https://raw.githubusercontent.com/zhangxiaochuZXC/ServerFile01/master/apps.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task,NSArray * responseObject) {
         //      字典转模型
-        NSMutableArray *tmpM = [NSMutableArray arrayWithCapacity:responseObject.count];
-        [responseObject enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            JSDAppModel *app = [JSDAppModel appModelWithDict:obj];
-            [tmpM addObject:app];
-        }];
-        //        赋值给全局变量
-        _modelArr = tmpM;
+        _modelArr = [NSArray yy_modelArrayWithClass:[JSDAppModel class] json:responseObject];
         NSLog(@"图片下载完成...%@",_modelArr);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"erro");

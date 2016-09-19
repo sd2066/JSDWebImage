@@ -7,6 +7,7 @@
 //
 
 #import "JSDDownloadOperation.h"
+#import "NSString+path.h"
 
 @interface JSDDownloadOperation ()
 /**
@@ -31,7 +32,7 @@
  *  重写main方法，进行下载图片
  */
 -(void)main{
-    NSLog(@"图片传入");
+    NSLog(@"传入");
     [NSThread sleepForTimeInterval:1.0];
     /**
      *  异步下载图片
@@ -39,6 +40,8 @@
     NSURL *url = [NSURL URLWithString:_urlStr];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
+//   把图片缓存到沙盒中
+    [data writeToFile:[self.urlStr appendCaches] atomically:YES];
     /**
      *  拦截下载图片回调操作
      */
@@ -52,7 +55,7 @@
     NSAssert(self.iamgeBlock != nil, @"回调的代码块不能为空");
     [[NSOperationQueue mainQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
                    self.iamgeBlock(image);
-        NSLog(@"图片传图完成!");
+        NSLog(@"完成!");
     }]];
 
 
