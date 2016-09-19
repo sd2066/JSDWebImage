@@ -12,6 +12,7 @@
 #import "JSDAppModel.h"
 #import "YYModel.h"
 #import "JSDDownloadManager.h"
+#import "UIImageView+SD.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconimageView;
@@ -26,7 +27,7 @@
 /**
  *  上一次的图像地址
  */
-@property(nonatomic,copy) NSString *lastUrlStr;
+@property(nonatomic,copy) NSString *lastURLString;
 @end
 
 @implementation ViewController{
@@ -49,18 +50,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     int random = arc4random_uniform((unsigned int)_modelArr.count);
     JSDAppModel *app = _modelArr[random];
-//    判断连续两次传入的地址是否一样，如果不一样，就取消上一次的操作
-    if (![app.icon isEqualToString:_lastUrlStr] && _lastUrlStr != nil) {
-//        单例接管取消操作
-        [[JSDDownloadManager sharedDownloadManager] downloadManagerCancelDowmloadOperationWithLastUrl:self.lastUrlStr];
-    }
-    //        把本次图像地址记录一下
-    self.lastUrlStr = app.icon;
-
-//    单例接管下载操作
-    [[JSDDownloadManager sharedDownloadManager] downloadImageWithUrlStr:app.icon successBlock:^(UIImage *image) {
-        self.iconimageView.image = image;
-    }];
+//   使用分类方法实现图片下载
+    [self.iconimageView jsd_setImageWithUrlStr:app.icon];
 }
 /**
  *  AFN加载Jason数据

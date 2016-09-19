@@ -29,6 +29,8 @@
          */
         self.queue = [[NSOperationQueue alloc] init];
         self.opsCache = [NSMutableDictionary dictionary];
+//        实例化图片缓存池
+        self.imagesCache = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -88,6 +90,7 @@
 //    查看沙盒缓存
     UIImage *cacheImage = [UIImage imageWithContentsOfFile:[urlStr appendCaches]];
     if (cacheImage) {
+        [self.imagesCache setObject:cacheImage forKey:urlStr];
         return YES;
     }
     

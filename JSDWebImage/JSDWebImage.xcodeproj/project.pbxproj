@@ -11,6 +11,7 @@
 		072187A01D9001EF00A9B585 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721879D1D9001EF00A9B585 /* YYClassInfo.m */; };
 		072187A31D9002DC00A9B585 /* JSDDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 072187A21D9002DC00A9B585 /* JSDDownloadManager.m */; };
 		072187A61D900EE700A9B585 /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 072187A51D900EE700A9B585 /* NSString+path.m */; };
+		072187A91D9016F300A9B585 /* UIImageView+SD.m in Sources */ = {isa = PBXBuildFile; fileRef = 072187A81D9016F300A9B585 /* UIImageView+SD.m */; };
 		077C40D51D8D65A800DA85FE /* JSDDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */; };
 		077C40E41D8D6C2300DA85FE /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40D81D8D6C2300DA85FE /* AFHTTPSessionManager.m */; };
 		077C40E51D8D6C2300DA85FE /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 077C40DB1D8D6C2300DA85FE /* AFNetworkReachabilityManager.m */; };
@@ -37,6 +38,8 @@
 		072187A21D9002DC00A9B585 /* JSDDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDDownloadManager.m; sourceTree = "<group>"; };
 		072187A41D900EE700A9B585 /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
 		072187A51D900EE700A9B585 /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
+		072187A71D9016F300A9B585 /* UIImageView+SD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SD.h"; sourceTree = "<group>"; };
+		072187A81D9016F300A9B585 /* UIImageView+SD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SD.m"; sourceTree = "<group>"; };
 		077C40D31D8D65A800DA85FE /* JSDDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDownloadOperation.h; sourceTree = "<group>"; };
 		077C40D41D8D65A800DA85FE /* JSDDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDDownloadOperation.m; sourceTree = "<group>"; };
 		077C40D71D8D6C2300DA85FE /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				072187A21D9002DC00A9B585 /* JSDDownloadManager.m */,
 				072187A41D900EE700A9B585 /* NSString+path.h */,
 				072187A51D900EE700A9B585 /* NSString+path.m */,
+				072187A71D9016F300A9B585 /* UIImageView+SD.h */,
+				072187A81D9016F300A9B585 /* UIImageView+SD.m */,
 			);
 			name = JSDWebImage;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				077C40E41D8D6C2300DA85FE /* AFHTTPSessionManager.m in Sources */,
 				077C40EC1D8D6C5500DA85FE /* JSDAppModel.m in Sources */,
 				077C40E91D8D6C2300DA85FE /* AFURLSessionManager.m in Sources */,
+				072187A91D9016F300A9B585 /* UIImageView+SD.m in Sources */,
 				07E4D9231D8D522B00BE854C /* main.m in Sources */,
 				072187A61D900EE700A9B585 /* NSString+path.m in Sources */,
 				072187A01D9001EF00A9B585 /* YYClassInfo.m in Sources */,
